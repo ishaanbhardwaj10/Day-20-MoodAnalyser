@@ -8,6 +8,29 @@ namespace MoodAnalyserProblem
 {
     public class MoodAnalyser
     {
+        private string message;
+
+        public MoodAnalyser()
+        {
+            this.message = null;
+        }
+
+        public MoodAnalyser(string message)
+        {
+            this.message = message;
+        }
+
+        public string analyseMood()
+        {
+            if (this.message.Contains("Sad"))
+            {
+                return "SAD";
+            }
+            else
+            {
+                return "HAPPY";
+            }
+        }
 
         public string analyseMood(string message)
         {
